@@ -6,11 +6,6 @@ final_do_jogo = false
 
 teste = [[1,2,3], [4,5,6], [7,8,9]]
 
-while estrutura >= 10 do
-    estrutura += 1
-    puts teste
-end
-
 def show(teste)
     puts "\nTABULEIRO\n\n"
     teste.each do |r|
