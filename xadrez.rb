@@ -1,8 +1,10 @@
-# O desafio será construir um programa que saiba quantas peças tem no tabuleiro sem if, else, ou switch (condicionais)
-
-estrutura = 0
-
 final_do_jogo = false
+
+## tentativa de fazer um bot que irá fazer o jogo comigo
+
+inimigo = nil
+
+
 
 teste = [[1,2,3], [4,5,6], [7,8,9]]
 
@@ -38,4 +40,26 @@ while final_do_jogo == false do
         if final_do_jogo == true
             puts "Você ganhou!"
         end
-    end
+
+# ----------------------------------------------------------------------- INIMIGO
+puts "\nJogador 2, escolha uma linha do tabuleiro"
+linha = rand(3)
+puts "\nJogador 2, escolha uma pilha do tabuleiro"
+coluna = rand(3)
+        
+            teste[linha][coluna] = 'O'
+        
+            show(teste)
+            
+            if teste[0][0] == 'O' and teste[0][1] == 'O' and teste[0][2] == 'O'
+                final_do_jogo = false
+            elsif teste[1][0] == 'O' and teste[1][1] == 'O' and teste[1][2] == 'O'
+                    final_do_jogo = false
+                elsif teste[2][0] == 'O' and teste[2][1] == 'O' and teste[2][2] == 'O'
+                    final_do_jogo = false
+                elsif teste[0][0] == 'O' and teste[1][1] == 'O' and teste[2][2] == 'O'
+                    final_do_jogo = false
+                elsif teste[2][0] == 'O' and teste[1][1] == 'O' and teste[0][2] == 'O'
+                    final_do_jogo = false
+                end
+            end
